@@ -30,7 +30,7 @@ const HeroSection = () => {
                   transition={{ delay: 0.2 }}
                   className="inline-block px-4 py-1.5 rounded-full border border-gold text-primary text-sm font-body tracking-widest uppercase mb-6"
               >
-                Premium Concept
+                OsteoBalance
               </motion.span>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight mb-6">

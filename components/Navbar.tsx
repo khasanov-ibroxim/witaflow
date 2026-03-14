@@ -7,8 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-  { href: "#mahsulot", label: "Mahsulot" },
-  { href: "#haqida", label: "Kompaniya" },
+  { href: "/#mahsulot", label: "Mahsulot" },
+  { href: "/#haqida", label: "Kompaniya" },
 ];
 
 const Navbar = () => {
