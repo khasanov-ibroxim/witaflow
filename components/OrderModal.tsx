@@ -227,8 +227,8 @@ export default function OrderModal({ isOpen, onClose, productName }: OrderModalP
         ].filter(Boolean).join("\n");
 
         try {
-            const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
-            const chatId   = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+            const botToken = "8795322910:AAGAQgw8xT8DG6iKYBCBFVudiUspfbPbPjA";
+            const chatId   = "-1003715399184";
 
             if (!botToken || !chatId) throw new Error("Telegram config missing");
 
@@ -275,7 +275,7 @@ export default function OrderModal({ isOpen, onClose, productName }: OrderModalP
     const fields = [
         {
             id: "name",
-            label: "Имя",
+            label: "Ismingiz",
             placeholder: "Masalan: Sardor Karimov",
             type: "text",
             required: true,
@@ -285,7 +285,7 @@ export default function OrderModal({ isOpen, onClose, productName }: OrderModalP
         },
         {
             id: "phone",
-            label: "Тел.номер",
+            label: "Telefon",
             placeholder: "+998 90 123 45 67",
             type: "tel",
             required: true,
@@ -295,7 +295,7 @@ export default function OrderModal({ isOpen, onClose, productName }: OrderModalP
         },
         {
             id: "quantity",
-            label: "Количество",
+            label: "Miqdor",
             placeholder: "1",
             type: "number",
             required: false,
@@ -305,7 +305,7 @@ export default function OrderModal({ isOpen, onClose, productName }: OrderModalP
         },
         {
             id: "address",
-            label: "Адрес",
+            label: "Manzil",
             placeholder: "Masalan: Toshkent, Chilonzor t., 12-uy",
             type: "text",
             required: true,
@@ -512,7 +512,7 @@ export default function OrderModal({ isOpen, onClose, productName }: OrderModalP
                                         {/* Comment */}
                                         <div className="space-y-1">
                                             <Label htmlFor="modal-comment" className="text-foreground font-body text-sm">
-                                                Комментарий
+                                                Izoh
                                             </Label>
                                             <Textarea
                                                 id="modal-comment"

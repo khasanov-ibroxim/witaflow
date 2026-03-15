@@ -110,13 +110,6 @@ const CTASection = () => {
           return "Noto'g'ri operator kodi. Masalan: 90, 91, 93, 95, 97, 99...";
         return "";
       }
-      case "quantity": {
-        const n = parseInt(value, 10);
-        if (isNaN(n) || value.trim() === "") return "Miqdor kiritilmadi.";
-        if (n < 1)   return "Miqdor 1 dan kam bo'lmasin.";
-        if (n > 999) return "Miqdor 999 dan oshmasin.";
-        return "";
-      }
       case "address": {
         const v = value.trim();
         if (!v)           return "Manzil kiritilmadi.";
@@ -154,7 +147,6 @@ const CTASection = () => {
     const next: FieldErrors = {
       name:     validateField("name",     form.name),
       phone:    validateField("phone",    form.phone),
-      quantity: validateField("quantity", form.quantity),
       address:  validateField("address",  form.address),
       comment:  validateField("comment",  form.comment),
     };
@@ -172,17 +164,16 @@ const CTASection = () => {
     setStatus("loading");
 
     const text = [
-      `🛒 <b>Yangi buyurtma</b>`,
+      `🛒 <b>Qayta A'loqa</b>`,
       `👤 <b>Ism:</b> ${form.name.trim()}`,
       `📞 <b>Tel:</b> ${sanitizePhone(form.phone)}`,
-      `🔢 <b>Miqdori:</b> ${form.quantity}`,
       `📍 <b>Manzil:</b> ${form.address.trim()}`,
       form.comment.trim() ? `💬 <b>Izoh:</b> ${form.comment.trim()}` : "",
     ].filter(Boolean).join("\n");
 
     try {
-      const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
-      const chatId   = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+      const botToken = "8795322910:AAGAQgw8xT8DG6iKYBCBFVudiUspfbPbPjA";
+      const chatId   = "-1003715399184";
       if (!botToken || !chatId) throw new Error("config");
       const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: "POST",
@@ -328,7 +319,7 @@ const CTASection = () => {
             >
               <div className="bg-gradient-card border border-gold rounded-2xl p-6 sm:p-8 lg:p-10">
                 <h3 className="font-display font-bold text-xl text-foreground mb-1">
-                  Buyurtma berish
+                  Biz bilan bog&apos;lanish
                 </h3>
                 <p className="text-muted-foreground font-body text-sm mb-7">
                   Formni to&apos;ldiring, biz siz bilan bog&apos;lanamiz
@@ -347,7 +338,7 @@ const CTASection = () => {
                           <CheckCircle2 className="w-8 h-8 text-primary" />
                         </div>
                         <h4 className="font-display font-bold text-xl text-foreground">
-                          Buyurtma qabul qilindi!
+                          Xabar yuborildi
                         </h4>
                         <p className="text-muted-foreground font-body text-sm">
                           Tez orada siz bilan bog&apos;lanamiz.
@@ -356,7 +347,7 @@ const CTASection = () => {
                             onClick={() => setStatus("idle")}
                             className="mt-1 px-6 py-2.5 rounded-xl bg-gradient-gold font-body font-semibold text-sm text-primary-foreground hover:opacity-90 transition-opacity cursor-pointer"
                         >
-                          Yangi buyurtma
+                          Yangi xabar
                         </button>
                       </motion.div>
                   ) : (
@@ -467,36 +458,7 @@ const CTASection = () => {
                         {/* Row 2: Quantity + Address */}
                         <div className="grid sm:grid-cols-2 gap-4">
                           {/* Quantity */}
-                          <div className="space-y-1">
-                            <Label htmlFor="cta-quantity" className="text-foreground font-body text-sm">Miqdori</Label>
-                            <Input
-                                id="cta-quantity"
-                                type="number"
-                                inputMode="numeric"
-                                min={1} max={999}
-                                value={form.quantity}
-                                disabled={status === "loading"}
-                                onChange={(e) => handleChange("quantity", e.target.value)}
-                                onBlur={() => handleBlur("quantity")}
-                                aria-invalid={!!(touched.quantity && errors.quantity)}
-                                className={[
-                                  "bg-background/50 text-foreground h-12 transition-colors",
-                                  touched.quantity && errors.quantity ? "border-destructive" : "border-border",
-                                ].join(" ")}
-                            />
-                            <AnimatePresence mode="wait">
-                              {touched.quantity && errors.quantity ? (
-                                  <motion.p key="err" role="alert"
-                                            initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}
-                                            className="text-destructive text-xs font-body flex items-center gap-1"
-                                  >
-                                    <AlertCircle className="w-3 h-3" aria-hidden="true" />{errors.quantity}
-                                  </motion.p>
-                              ) : (
-                                  <p key="hint" className="text-muted-foreground text-xs font-body">1 dan 999 gacha</p>
-                              )}
-                            </AnimatePresence>
-                          </div>
+
 
                           {/* Address */}
                           <div className="space-y-1">
