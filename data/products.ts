@@ -20,15 +20,15 @@ export const products: Product[] = [
     price: 200000,
     priceFormatted: "200 000 so'm",
     image: osteobalanceImg,
-    shortDesc: "Kaltsiy, Magniy, D3, Sink va C vitamini suspenziyasi — suyaklar mustahkamligi va immunitet uchun.",
+    shortDesc: "Kaltsiy, Magniy, D3, Rux va C vitamini suspenziyasi — suyaklar mustahkamligi va immunitet uchun.",
     description:
-      "OsteoBalance — organizmga zarur bo'lgan kaltsiy, magniy, D3 vitamini, sink va C vitaminini o'z ichiga olgan premium sifatli suspenziya. Suyaklar mustahkamligi, immunitet tizimini qo'llab-quvvatlash va umumiy sog'lom rivojlanish uchun maxsus ishlab chiqilgan.",
+      "OsteoBalance — organizmga zarur bo'lgan kaltsiy, magniy, D3 vitamini, rux va C vitaminini o'z ichiga olgan premium sifatli tsitrat formasida. Suyaklar mustahkamligi, immunitet tizimini qo'llab-quvvatlash va umumiy sog'lom rivojlanish uchun maxsus ishlab chiqilgan.",
     benefits: [
       "Kaltsiy va D3 — suyaklar va tishlar mustahkamligi uchun",
       "Magniy — mushaklar va asab tizimi uchun",
-      "Sink — immunitet tizimini kuchaytiradi",
+      "Rux — immunitet tizimini kuchaytiradi",
       "C vitamini — energiya va himoya manbayi",
-      "Yuqori so'rilish darajasi",
+      "Sorilishi darajasi 98% gacha",
     ],
     volume: "100 ml",
   }

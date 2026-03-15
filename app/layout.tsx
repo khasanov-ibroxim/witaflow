@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         template: "%s | Vitaflow Pharm",
     },
     description:
-        "Vitaflow Pharm — Toshkentdagi premium vitamin va mineral komplekslari ishlab chiqaruvchisi. OsteoBalance (Kaltsiy+D3+Magniy+Sink+C), Baby Vita bolalar uchun, Melatonin uyqu uchun. GMO va shakarsiz, yuqori sifat.",
+        "Vitaflow Pharm — Toshkentdagi premium vitamin va mineral komplekslari ishlab chiqaruvchisi. OsteoBalance (Kaltsiy+D3+Magniy+Rux+C), Baby Vita bolalar uchun, Melatonin uyqu uchun. GMO va shakarsiz, yuqori sifat.",
     keywords: [
         "vitaflow pharm",
         "osteobalance",
@@ -190,7 +190,7 @@ export default function RootLayout({
                                             "@type": "Product",
                                             name: "OsteoBalance",
                                             description:
-                                                "Kaltsiy, Magniy, D3, Sink va C vitamini suspenziyasi — suyaklar mustahkamligi va immunitet uchun. 100 ml.",
+                                                "Kaltsiy, Magniy, D3, Rux va C vitamini suspenziyasi — suyaklar mustahkamligi va immunitet uchun. 100 ml.",
                                             url: `${siteUrl}/mahsulot/osteobalance`,
                                             image: `${siteUrl}/products/osteobalance.png`,
                                             brand: { "@type": "Brand", name: "Vitaflow Pharm" },

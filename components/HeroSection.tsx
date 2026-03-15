@@ -82,7 +82,7 @@ const HeroSection = () => {
                         >
                           <Image
                               src={productImage}
-                              alt="OsteoBalance — Kaltsiy, Magniy, D3, Sink va C vitamini suspenziyasi 100ml"
+                              alt="OsteoBalance — Kaltsiy, Magniy, D3, Rux va C vitamini suspenziyasi 100ml"
                               className="w-64 sm:w-80 lg:w-96 drop-shadow-2xl"
                               priority
                               quality={90}
