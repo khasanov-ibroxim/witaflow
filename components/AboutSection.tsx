@@ -1,6 +1,6 @@
 "use client"
 import {motion} from "framer-motion";
-import logoImage from "@/assets/vf-logo.png";
+import logoImage from "@/assets/logoRemoved.png";
 import {CheckCircle2} from "lucide-react";
 import Image from "next/image";
 
@@ -50,7 +50,7 @@ const AboutSection = () => {
                     >
                         <div className="relative w-72 h-72 sm:w-96 sm:h-96">
                             <div
-                                className="absolute inset-0 rounded-3xl bg-gradient-card border border-gold shadow-gold"/>
+                                className="absolute inset-0 rounded-3xl"/>
                             <Image
                                 src={logoImage}
                                 alt="Vitaflow Pharm — VF Premium Concept logotipi"

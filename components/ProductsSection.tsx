@@ -8,7 +8,7 @@ import Link from "next/link";
 const ProductsSection = () => {
   return (
       <section
-          id="mahsulotlar"
+          id="mahsulot"
           aria-label="Vitaflow Pharm mahsulotlari"
           className="py-24 bg-background relative overflow-hidden container"
       >

@@ -54,7 +54,7 @@ const item = {
 const BenefitsSection = () => {
     return (
         <section
-            id="mahsulot"
+
             aria-label="OsteoBalance mahsulotining afzalliklari"
             className="py-24 bg-background relative"
         >

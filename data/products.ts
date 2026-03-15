@@ -1,6 +1,4 @@
-import osteobalanceImg from "@/assets/ob_product.png";
-import babyVitaImg from "@/assets/baby-vita-product.png";
-import melatoninImg from "@/assets/melatonin-product.png";
+import osteobalanceImg from "@/assets/product.png";
 import {StaticImageData} from "next/image";
 
 export interface Product {
@@ -19,8 +17,8 @@ export const products: Product[] = [
   {
     id: "osteobalance",
     name: "OsteoBalance",
-    price: 500000,
-    priceFormatted: "500 000 so'm",
+    price: 200000,
+    priceFormatted: "200 000 so'm",
     image: osteobalanceImg,
     shortDesc: "Kaltsiy, Magniy, D3, Sink va C vitamini suspenziyasi — suyaklar mustahkamligi va immunitet uchun.",
     description:

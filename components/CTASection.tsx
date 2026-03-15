@@ -8,16 +8,16 @@ import { Label } from "@/components/ui/label";
 
 // ─── Contact cards ────────────────────────────────────────────────────────────
 const contacts = [
-  { icon: Phone,  title: "Telefon", info: "+998 90 123 45 67",     href: "tel:+998901234567" },
-  { icon: Mail,   title: "Email",   info: "info@vitaflowpharm.uz", href: "mailto:info@vitaflowpharm.uz" },
-  { icon: MapPin, title: "Manzil",  info: "Toshkent, O'zbekiston", href: "https://maps.google.com/?q=Toshkent,+O%27zbekiston" },
+  { icon: Phone,  title: "Telefon", info: "+998 90 021 30 21",     href: "tel:+998900213021" },
+  { icon: Mail,   title: "Email",   info: "vitaflowpharm.uz@inbox.ru", href: "mailto:vitaflowpharm.uz@inbox.ru" },
+  { icon: MapPin, title: "Manzil",  info: "Toshkent, O’zbekiston.", href: "https://maps.google.com/?q=Toshkent,+O%27zbekiston" },
 ];
 
 // ─── Social links ─────────────────────────────────────────────────────────────
 const socials = [
   {
     name: "Instagram",
-    href: "https://instagram.com/vitaflowpharm",
+    href: "https://www.instagram.com/vitaflow_pharm?igsh=MWU1cXRtZWYwZXo4cQ==",
     color: "hover:border-pink-500/60 hover:shadow-[0_0_20px_rgba(236,72,153,0.15)]",
     iconColor: "group-hover:text-pink-400",
     icon: (
