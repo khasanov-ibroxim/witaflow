@@ -30,10 +30,10 @@ const HeroSection = () => {
                   transition={{ delay: 0.2 }}
                   className="inline-block px-4 py-1.5 rounded-full border border-gold text-primary text-sm font-body tracking-widest uppercase mb-6"
               >
-                OsteoBalance
+                Vitaflow Pharm
               </motion.span>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-6xl font-display font-bold leading-tight mb-6">
                 <span className="text-foreground">Sog&apos;lom</span>{" "}
                 <span className="text-gradient-gold">rivojlanish</span>
                 <br />
@@ -41,8 +41,7 @@ const HeroSection = () => {
               </h1>
 
               <p className="text-muted-foreground text-lg sm:text-xl max-w-lg mx-auto lg:mx-0 mb-8 font-body font-light leading-relaxed">
-                Kaltsiy, Magniy, D3, Sink va C vitamini — o&apos;zaro uyg&apos;unlikda bo&apos;lsa,
-                tanada kuchli immunitet va suyaklar poydevori yaratiladi.
+                Biz sifat va ilmiy yondashuvga asoslangan mahsulotlar yaratamiz. Har bir formulamiz mutaxassislar tomonidan ishlab chiqilgan va eng yuqori sifat standartlariga javob beradi.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -66,29 +65,29 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Product Image */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="flex justify-center"
-            >
-              <div className="relative">
-                <div className="absolute inset-0 glow-gold rounded-full scale-75" aria-hidden="true" />
-                <motion.div
-                    animate={{ y: [0, -15, 0] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                    className="relative z-10"
-                >
-                  <Image
-                      src={productImage}
-                      alt="OsteoBalance — Kaltsiy, Magniy, D3, Sink va C vitamini suspenziyasi 100ml"
-                      className="w-64 sm:w-80 lg:w-96 drop-shadow-2xl"
-                      priority
-                      quality={90}
-                  />
-                </motion.div>
-              </div>
-            </motion.div>
+            {/*<motion.div*/}
+            {/*    initial={{ opacity: 0, scale: 0.8 }}*/}
+            {/*    animate={{ opacity: 1, scale: 1 }}*/}
+            {/*    transition={{ duration: 1, delay: 0.3 }}*/}
+            {/*    className="flex justify-center"*/}
+            {/*>*/}
+            {/*  <div className="relative">*/}
+            {/*    <div className="absolute inset-0 glow-gold rounded-full scale-75" aria-hidden="true" />*/}
+            {/*    <motion.div*/}
+            {/*        animate={{ y: [0, -15, 0] }}*/}
+            {/*        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}*/}
+            {/*        className="relative z-10"*/}
+            {/*    >*/}
+            {/*      <Image*/}
+            {/*          src={productImage}*/}
+            {/*          alt="OsteoBalance — Kaltsiy, Magniy, D3, Sink va C vitamini suspenziyasi 100ml"*/}
+            {/*          className="w-64 sm:w-80 lg:w-96 drop-shadow-2xl"*/}
+            {/*          priority*/}
+            {/*          quality={90}*/}
+            {/*      />*/}
+            {/*    </motion.div>*/}
+            {/*  </div>*/}
+            {/*</motion.div>*/}
           </div>
         </div>
       </section>
