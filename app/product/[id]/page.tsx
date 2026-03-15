@@ -71,6 +71,9 @@ export default async function ProductPage({ params }: Props) {
         },
     };
 
+    const usegLeft = product.useg.slice(0, 4);
+    const usegRight = product.useg.slice(4, 8);
+
     return (
         <>
             <script
@@ -79,12 +82,12 @@ export default async function ProductPage({ params }: Props) {
             />
             <Navbar />
             <main className="pt-20 min-h-screen bg-background">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
 
                     {/* Breadcrumb */}
-                    <nav aria-label="Breadcrumb" className="mb-8">
+                    <nav aria-label="Breadcrumb" className="mb-6 sm:mb-8">
                         <ol
-                            className="flex items-center gap-2 text-sm text-muted-foreground font-body"
+                            className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-sm text-muted-foreground font-body"
                             itemScope
                             itemType="https://schema.org/BreadcrumbList"
                         >
@@ -103,7 +106,7 @@ export default async function ProductPage({ params }: Props) {
                             </li>
                             <li aria-hidden="true">/</li>
                             <li
-                                className="text-primary"
+                                className="text-primary truncate max-w-[160px] sm:max-w-none"
                                 itemProp="itemListElement"
                                 itemScope
                                 itemType="https://schema.org/ListItem"
@@ -114,16 +117,18 @@ export default async function ProductPage({ params }: Props) {
                         </ol>
                     </nav>
 
-                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                    {/* Hero: image + info */}
+                    <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
                         {/* Image */}
                         <div className="flex justify-center">
-                            <div className="relative bg-secondary/30 rounded-3xl border border-border p-12">
+                            <div className="relative bg-secondary/30 rounded-3xl border border-border p-8 sm:p-12 w-full max-w-sm lg:max-w-none">
                                 <Image
                                     src={product.image}
                                     alt={`${product.name} — ${product.volume} suspenziya`}
                                     width={400}
                                     height={400}
-                                    className="w-full max-w-xs object-contain drop-shadow-xl"
+                                    className="w-full max-w-[260px] sm:max-w-xs mx-auto object-contain drop-shadow-xl"
                                     priority
                                     quality={90}
                                 />
@@ -131,14 +136,14 @@ export default async function ProductPage({ params }: Props) {
                         </div>
 
                         {/* Info */}
-                        <div className="space-y-6">
-              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-body tracking-widest uppercase">
-                {product.volume}
-              </span>
-                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground">
+                        <div className="space-y-5 sm:space-y-6">
+                            <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-body tracking-widest uppercase">
+                                {product.volume}
+                            </span>
+                            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-display font-bold text-foreground leading-tight">
                                 {product.name}
                             </h1>
-                            <p className="text-muted-foreground font-body text-lg leading-relaxed">
+                            <p className="text-muted-foreground font-body text-base sm:text-lg leading-relaxed">
                                 {product.description}
                             </p>
 
@@ -146,22 +151,71 @@ export default async function ProductPage({ params }: Props) {
                                 {product.benefits.map((benefit, i) => (
                                     <li key={i} className="flex items-start gap-3">
                                         <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
-                                        <span className="text-foreground font-body">{benefit}</span>
+                                        <span className="text-foreground font-body text-sm sm:text-base">{benefit}</span>
                                     </li>
                                 ))}
                             </ul>
 
-                            <div className="pt-4">
-                                <p className="text-4xl font-display font-bold text-gradient-gold mb-6">
+                            <div className="pt-2 sm:pt-4">
+                                <p className="text-3xl sm:text-4xl font-display font-bold text-gradient-gold mb-4 sm:mb-6">
                                     {product.priceFormatted}
                                 </p>
-                                {/* Client component — opens order modal */}
                                 <OrderButton productName={product.name} />
                             </div>
                         </div>
                     </div>
 
-                    <div className="mt-8">
+                    {/* Usage sections */}
+                    <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+
+                        {/* useg — 8 item, ichida 2 ustun */}
+                        <div>
+                            <h2 className="text-xl sm:text-2xl font-display font-bold mb-5">
+                                Qaysi holatlarda qo&apos;llaniladi:
+                            </h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                                <ul className="space-y-3" role="list">
+                                    {usegLeft.map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3">
+                                            <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                                            <span className="text-foreground font-body text-sm">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <ul className="space-y-3" role="list">
+                                    {usegRight.map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3">
+                                            <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                                            <span className="text-foreground font-body text-sm">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* year_useg — 3 item, bitta ustun */}
+                        <div>
+                            <h2 className="text-xl sm:text-2xl font-display font-bold mb-5">
+                                Qabul qilish tartibi
+                            </h2>
+                            <ul className="space-y-3" role="list">
+                                {product.year_useg.map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3">
+                                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                                        <span className="text-foreground font-body text-sm sm:text-base">{item}</span>
+                                    </li>
+                                ))}
+                                <li className="pt-1">
+                                    <p className="text-muted-foreground font-body text-sm sm:text-base leading-relaxed">
+                                        Muhim eslatma: doktorlar har bir bemor uchun individual miqdorni belgilab berishga haqli.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Back link */}
+                    <div className="mt-10 sm:mt-12">
                         <Link
                             href="/"
                             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-body text-sm"
@@ -170,6 +224,7 @@ export default async function ProductPage({ params }: Props) {
                             Bosh sahifaga qaytish
                         </Link>
                     </div>
+
                 </div>
             </main>
             <Footer />

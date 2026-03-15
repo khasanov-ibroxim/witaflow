@@ -6,6 +6,8 @@ export interface Product {
   name: string;
   price: number;
   priceFormatted: string;
+  useg:string[];
+  year_useg:string[];
   image: StaticImageData;
   shortDesc: string;
   description: string;
@@ -29,6 +31,21 @@ export const products: Product[] = [
       "Rux — immunitet tizimini kuchaytiradi",
       "C vitamini — energiya va himoya manbayi",
       "Sorilishi darajasi 98% gacha",
+    ],
+    useg:[
+        "Raxit",
+        "Talvasa (sudoroga) xurujlari",
+        "Ko‘p terlash",
+        "Yig‘lab qotib qolish holatlari",
+        "Mushak tonusining pastligi",
+        "Fikrning tarqoqligi",
+        "Xotiraning sustligi",
+        "Immun tizimining pastligi"
+    ],
+    year_useg:[
+        "0-3 yosh: 2.5 ml – 2 mahal",
+        "4-7 yosh: 5 ml – 2 mahal",
+        "8–14 yosh: 10 ml – 2 mahal"
     ],
     volume: "100 ml",
   }
