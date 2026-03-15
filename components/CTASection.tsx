@@ -285,8 +285,8 @@ const CTASection = () => {
 
               {/* Social links */}
               <motion.div
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1}}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                   className="pt-2"
@@ -322,8 +322,8 @@ const CTASection = () => {
 
             {/* ── Right: Order form ── */}
             <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
             >
               <div className="bg-gradient-card border border-gold rounded-2xl p-6 sm:p-8 lg:p-10">
@@ -338,8 +338,8 @@ const CTASection = () => {
                   {status === "success" ? (
                       <motion.div
                           key="success"
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
+                          initial={{ opacity: 0,  }}
+                          animate={{ opacity: 1,  }}
                           exit={{ opacity: 0 }}
                           className="flex flex-col items-center gap-4 py-10 text-center"
                       >
