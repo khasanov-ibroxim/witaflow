@@ -144,14 +144,14 @@ const CTASection = () => {
   };
 
   const validateAll = (): boolean => {
-    const next: FieldErrors = {
+    const  next_error:FieldErrors = {
       name:     validateField("name",     form.name),
       phone:    validateField("phone",    form.phone),
       address:  validateField("address",  form.address),
       comment:  validateField("comment",  form.comment),
     };
-    setErrors(next);
-    return Object.values(next).every(e => e === "");
+    setErrors(next_error);
+    return Object.values(next_error).every(e => e === "");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
