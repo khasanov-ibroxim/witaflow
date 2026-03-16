@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const description = `${product.shortDesc} Narxi: ${product.priceFormatted}. Premium sifat, GMO va shakarsiz. Toshkentda yetkazib berish.`;
     const url = `${siteUrl}/product/${product.id}`;
 
+    // ✅ Absolute URL ishlatiladi
+    const ogImage = `/product.png`;
+
     return {
         title,
         description,
@@ -38,13 +41,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             title,
             description,
             siteName: "Vitaflow Pharm",
-            images: [{ url: `/product.png`, width: 400, height: 400, alt: `${product.name} — Vitaflow Pharm` }],
+            images: [{
+                url: ogImage,   // ← absolute URL
+                width: 400,
+                height: 400,
+                alt: `${product.name} — Vitaflow Pharm`
+            }],
         },
         twitter: {
             card: "summary_large_image",
             title,
             description,
-            images: [`/products/${product.id}.png`],
+            images: [ogImage],  // ← bir xil, absolute URL
         },
     };
 }

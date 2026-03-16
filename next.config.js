@@ -2,6 +2,7 @@
 const nextConfig = {
   compress: true,
   output: "export",
+   trailingSlash: true,
   poweredByHeader: false,
   reactStrictMode: true,
 
