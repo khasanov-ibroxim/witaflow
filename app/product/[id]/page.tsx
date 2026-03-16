@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const title = `${product.name} — ${product.volume} | Vitaflow Pharm`;
     const description = `${product.shortDesc} Narxi: ${product.priceFormatted}. Premium sifat, GMO va shakarsiz. Toshkentda yetkazib berish.`;
-    const url = `${siteUrl}/mahsulot/${product.id}`;
+    const url = `${siteUrl}/product/${product.id}`;
 
     return {
         title,
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             title,
             description,
             siteName: "Vitaflow Pharm",
-            images: [{ url: `/products/${product.id}.png`, width: 800, height: 800, alt: `${product.name} — Vitaflow Pharm` }],
+            images: [{ url: `/product.png`, width: 400, height: 400, alt: `${product.name} — Vitaflow Pharm` }],
         },
         twitter: {
             card: "summary_large_image",
@@ -59,8 +59,8 @@ export default async function ProductPage({ params }: Props) {
         "@type": "Product",
         name: product.name,
         description: product.description,
-        image: `${siteUrl}/products/${product.id}.png`,
-        url: `${siteUrl}/mahsulot/${product.id}`,
+        image: `/product.png`,
+        url: `${siteUrl}/product/${product.id}`,
         brand: { "@type": "Brand", name: "Vitaflow Pharm" },
         offers: {
             "@type": "Offer",
