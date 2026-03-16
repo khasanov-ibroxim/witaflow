@@ -55,9 +55,9 @@ export const metadata: Metadata = {
             "OsteoBalance, Baby Vita va Melatonin — ilmiy asosda ishlab chiqilgan premium sifatli vitamin suspenziyalari. GMO va shakarsiz. Toshkentda yetkazib berish.",
         images: [
             {
-                url: "/og-image.png",
-                width: 1200,
-                height: 630,
+                url: "/vf-logo.png",
+                width: 400,
+                height: 400,
                 alt: "Vitaflow Pharm — OsteoBalance, Baby Vita, Melatonin premium vitamin suspenziyalari",
             },
         ],
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
         title: "Vitaflow Pharm — Premium Vitaminlar | Uzbekiston",
         description:
             "OsteoBalance, Baby Vita va Melatonin — ilmiy asosda ishlab chiqilgan premium vitamin suspenziyalari.",
-        images: ["/og-image.png"],
+        images: ["/vf-logo.png"],
     },
 
     robots: {
@@ -85,20 +85,20 @@ export const metadata: Metadata = {
 
     icons: {
         icon: [
-            { url: "/favicon.ico", sizes: "any" },
-            { url: "/icon.svg", type: "image/svg+xml" },
-            { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-            { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+            { url: "/vf-logo.png", sizes: "any" },
+            { url: "/vf-logo.png", type: "image/svg+xml" },
+            { url: "/vf-logo.png", sizes: "192x192", type: "image/png" },
+            { url: "/vf-logo.png", sizes: "512x512", type: "image/png" },
         ],
-        apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-        shortcut: "/favicon.ico",
+        apple: [{ url: "/vf-logo.png", sizes: "180x180" }],
+        shortcut: "/vf-logo.png",
     },
 
     manifest: "/site.webmanifest",
 
     verification: {
-        // google: "YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
-        // yandex: "YOUR_YANDEX_WEBMASTER_CODE",
+        google: "9903763f49128b58",
+        yandex: "ccbfefa766afbf88",
     },
 
     category: "health",
@@ -135,14 +135,14 @@ export default function RootLayout({
                         "@graph": [
                             {
                                 "@type": "Organization",
-                                "@id": `${siteUrl}/#organization`,
+                                "@id": `${siteUrl}/#haqida`,
                                 name: "Vitaflow Pharm",
                                 url: siteUrl,
                                 logo: {
                                     "@type": "ImageObject",
-                                    url: `${siteUrl}/logo.png`,
-                                    width: 512,
-                                    height: 512,
+                                    url: `${siteUrl}/vf-logo.png`,
+                                    width: 312,
+                                    height: 312,
                                 },
                                 description:
                                     "Vitaflow Pharm — O'zbekistonda premium sifatli vitamin va mineral komplekslari ishlab chiqaruvchisi.",
@@ -153,7 +153,7 @@ export default function RootLayout({
                                 },
                                 contactPoint: {
                                     "@type": "ContactPoint",
-                                    telephone: "+998-90-123-45-67",
+                                    telephone: "+998-90-021-30-21",
                                     contactType: "customer service",
                                     availableLanguage: ["Uzbek", "Russian"],
                                 },
@@ -161,21 +161,21 @@ export default function RootLayout({
                             },
                             {
                                 "@type": "WebSite",
-                                "@id": `${siteUrl}/#website`,
+                                "@id": `${siteUrl}/`,
                                 url: siteUrl,
                                 name: "Vitaflow Pharm",
                                 description:
                                     "Premium vitamin va mineral komplekslari — OsteoBalance, Baby Vita, Melatonin",
-                                publisher: { "@id": `${siteUrl}/#organization` },
+                                publisher: { "@id": `${siteUrl}/#haqida` },
                                 inLanguage: "uz-UZ",
                             },
                             {
                                 "@type": "WebPage",
-                                "@id": `${siteUrl}/#webpage`,
+                                "@id": `${siteUrl}/`,
                                 url: siteUrl,
                                 name: "Vitaflow Pharm — Premium Vitaminlar va Minerallar",
-                                isPartOf: { "@id": `${siteUrl}/#website` },
-                                about: { "@id": `${siteUrl}/#organization` },
+                                isPartOf: { "@id": `${siteUrl}/` },
+                                about: { "@id": `${siteUrl}/#haqida` },
                                 description:
                                     "OsteoBalance, Baby Vita va Melatonin — ilmiy asosda ishlab chiqilgan premium sifatli vitamin suspenziyalari.",
                                 inLanguage: "uz-UZ",
@@ -192,55 +192,15 @@ export default function RootLayout({
                                             name: "OsteoBalance",
                                             description:
                                                 "Kaltsiy, Magniy, D3, Rux va C vitamini suspenziyasi — suyaklar mustahkamligi va immunitet uchun. 100 ml.",
-                                            url: `${siteUrl}/mahsulot/osteobalance`,
-                                            image: `${siteUrl}/products/osteobalance.png`,
+                                            url: `${siteUrl}/product/osteobalance/`,
+                                            image: `/product.png`,
                                             brand: { "@type": "Brand", name: "Vitaflow Pharm" },
                                             offers: {
                                                 "@type": "Offer",
                                                 priceCurrency: "UZS",
-                                                price: "500000",
+                                                price: "200000",
                                                 availability: "https://schema.org/InStock",
-                                                seller: { "@id": `${siteUrl}/#organization` },
-                                            },
-                                        },
-                                    },
-                                    {
-                                        "@type": "ListItem",
-                                        position: 2,
-                                        item: {
-                                            "@type": "Product",
-                                            name: "Baby Vita",
-                                            description:
-                                                "Bolalar uchun multivitamin suspenziyasi — sog'lom o'sish va rivojlanish uchun. 100 ml.",
-                                            url: `${siteUrl}/mahsulot/baby-vita`,
-                                            image: `${siteUrl}/products/baby-vita.png`,
-                                            brand: { "@type": "Brand", name: "Vitaflow Pharm" },
-                                            offers: {
-                                                "@type": "Offer",
-                                                priceCurrency: "UZS",
-                                                price: "600000",
-                                                availability: "https://schema.org/InStock",
-                                                seller: { "@id": `${siteUrl}/#organization` },
-                                            },
-                                        },
-                                    },
-                                    {
-                                        "@type": "ListItem",
-                                        position: 3,
-                                        item: {
-                                            "@type": "Product",
-                                            name: "Melatonin",
-                                            description:
-                                                "Sifatli uyqu va dam olish uchun tabiiy melatonin preparati. 100 ml.",
-                                            url: `${siteUrl}/mahsulot/melatonin`,
-                                            image: `${siteUrl}/products/melatonin.png`,
-                                            brand: { "@type": "Brand", name: "Vitaflow Pharm" },
-                                            offers: {
-                                                "@type": "Offer",
-                                                priceCurrency: "UZS",
-                                                price: "800000",
-                                                availability: "https://schema.org/InStock",
-                                                seller: { "@id": `${siteUrl}/#organization` },
+                                                seller: { "@id": `${siteUrl}/#haqida` },
                                             },
                                         },
                                     },

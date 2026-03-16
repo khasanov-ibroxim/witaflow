@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+Sitemap: https://vitaflowpharm.uz/sitemap.xml
+Host: https://vitaflowpharm.uz

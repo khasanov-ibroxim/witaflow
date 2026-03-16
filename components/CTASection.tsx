@@ -80,9 +80,9 @@ function sanitizeName(v: string) {
   return v.replace(/[^a-zA-ZА-Яа-яЁёÀ-ÖØ-öø-ÿ''\-\s]/gu, "").slice(0, 50);
 }
 
-type FieldErrors = { name: string; phone: string; quantity: string; address: string; comment: string };
-const EMPTY_ERRORS: FieldErrors = { name: "", phone: "", quantity: "", address: "", comment: "" };
-const EMPTY_FORM = { name: "", phone: PHONE_PREFIX, quantity: "1", address: "", comment: "" };
+type FieldErrors = { name: string; phone: string;  address: string; comment: string };
+const EMPTY_ERRORS: FieldErrors = { name: "", phone: "",  address: "", comment: "" };
+const EMPTY_FORM = { name: "", phone: PHONE_PREFIX,  address: "", comment: "" };
 
 // ─── Component ────────────────────────────────────────────────────────────────
 const CTASection = () => {
