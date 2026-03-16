@@ -27,8 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const description = `${product.shortDesc} Narxi: ${product.priceFormatted}. Premium sifat, GMO va shakarsiz. Toshkentda yetkazib berish.`;
     const url = `${siteUrl}/product/${product.id}`;
 
-    // ✅ Absolute URL ishlatiladi
-    const ogImage = `/product.png`;
+    const ogImage = `${siteUrl}/product.png`;
 
     return {
         title,
