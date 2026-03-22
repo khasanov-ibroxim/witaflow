@@ -13,8 +13,8 @@ export const metadata: Metadata = {
         default: "Vitaflow Pharm — OsteoBalance, Baby Vita, Melatonin | Premium Vitaminlar Uzbekiston",
         template: "%s | Vitaflow Pharm",
     },
-    description:
-        "Vitaflow Pharm — Toshkentdagi premium vitamin va mineral komplekslari ishlab chiqaruvchisi. OsteoBalance (Kaltsiy+D3+Magniy+Rux+C), Baby Vita bolalar uchun, Melatonin uyqu uchun. GMO va shakarsiz, yuqori sifat.",
+    description: "Vitaflow Pharm — Toshkentdagi premium vitamin va mineral komplekslari ishlab chiqaruvchisi. OsteoBalance (Kaltsiy+D3+Magniy+Rux+C), Baby Vita bolalar uchun. Bolalar uchun vitaminlar, Osteo balance mahsuloti, кальций который не вызывает запор у детей, самый лучший кальций в Ташкенте. GMO va shakarsiz, yuqori sifat.",
+
     keywords: [
         "vitaflow pharm", "osteobalance", "kaltsiy magniy d3", "Osteo balance",
         "bad uzbekistan", "Самый лучший кальций в Ташкенте", "melatonin", "suyak vitamini", "Кальций который не вызывает запор у детей",
